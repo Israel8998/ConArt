@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "804386398966",
+    "project_id": "conart-e4a70",
+    "storage_bucket": "conart-e4a70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804386398966:android:07c11f2248590d6d1242d7",
+        "android_client_info": {
+          "package_name": "com.example.conart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804386398966-i4bpkt8pvvm5mtr89cv82uor02gstt1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCNIM_uWzMQweQM55fDSVSdCruOM5orqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804386398966-i4bpkt8pvvm5mtr89cv82uor02gstt1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
