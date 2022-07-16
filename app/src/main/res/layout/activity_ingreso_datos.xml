@@ -116,8 +116,8 @@
         android:layout_width="408dp"
         android:layout_height="79dp"
         app:srcCompat="@drawable/ingreso"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="371dp"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="367dp"
 
         />
 
