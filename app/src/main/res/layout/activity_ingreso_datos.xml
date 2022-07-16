@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".IngresoDatos">
@@ -11,10 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="126dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="127dp"
         android:text="INGRESO DATOS"
+        android:textColor="@color/black"
+        android:textColorHint="#817B7B"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,6 +29,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginBottom="38dp"
         android:text="NOMBRE WELCOME"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName" />
 
@@ -34,6 +40,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:text="Fecha"
+        android:textColor="@color/black"
+        android:textColorHint="#817B7B"
+        android:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName" />
@@ -46,6 +55,9 @@
         android:layout_marginBottom="56dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="#817B7B"
+        android:backgroundTint="@color/black"
         android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/txtTotal"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -59,24 +71,12 @@
         android:layout_marginEnd="2dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="#817B7B"
+        android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/txtIngreso"
-        android:layout_width="0dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="63dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtEgreso"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTotal" />
 
     <EditText
         android:id="@+id/txtEgreso"
@@ -85,6 +85,9 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="171dp"
+        android:textColor="@color/black"
+        android:textColorHint="#817B7B"
+        android:backgroundTint="@color/black"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -100,7 +103,22 @@
         android:layout_marginBottom="34dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="#817B7B"
+        android:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+
+        android:layout_width="408dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/ingreso"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="371dp"
+
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
