@@ -17,7 +17,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoogle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+        app:layout_constraintTop_toBottomOf="@+id/btnGoogle" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -71,8 +71,8 @@
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:textAlignment="center"
-        android:textColor="#000000"
-        android:textColorHint="#817B7B"
+        android:textColor="@color/black"
+        android:textColorHint="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnIngresar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,27 +108,27 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/btnGoogle"
         android:layout_width="55dp"
         android:layout_height="50dp"
         android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/aRegistrar"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+        app:layout_constraintEnd_toStartOf="@+id/btnFacebook"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnIngresar"
-        app:srcCompat="@drawable/common_google_signin_btn_icon_light_normal" />
+        app:srcCompat="@drawable/ic_launcher" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/btnFacebook"
         android:layout_width="55dp"
         android:layout_height="50dp"
         android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/aRegistrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintStart_toEndOf="@+id/btnGoogle"
         app:layout_constraintTop_toBottomOf="@+id/btnIngresar"
-        app:srcCompat="@drawable/ic_launcher" />
+        app:srcCompat="@drawable/ic_launcher_facebook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
