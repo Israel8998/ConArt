@@ -3,20 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_configuracion_perfil.xml" value="0.22402736212056434" />
         <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_crear_cuenta.xml" value="0.22402736212056434" />
         <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_ingreso_datos.xml" value="0.25" />
         <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_iniciar_sesion.xml" value="0.25" />
         <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_main2.xml" value="0.18540344514959203" />
+        <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_ver_datos.xml" value="0.25" />
         <entry key="..\:/Users/jaime/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_crear_cuenta.xml" value="0.28020833333333334" />
-        <entry key="..\:/Users/jaime/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_ingreso_datos.xml" value="0.33" />
+        <entry key="..\:/Users/jaime/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_ingreso_datos.xml" value="0.25" />
         <entry key="..\:/Users/jaime/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_iniciar_sesion.xml" value="0.25" />
         <entry key="..\:/Users/jaime/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/jaime/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_ver_datos.xml" value="0.32971014492753625" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -115,7 +115,7 @@
         android:layout_height="wrap_content"
         android:text="Button"
         tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="656dp" />
+        tools:layout_editor_absoluteY="756dp" />
 
     <TextView
         android:id="@+id/textView2"

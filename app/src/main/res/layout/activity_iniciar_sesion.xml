@@ -39,7 +39,6 @@
         android:id="@+id/aRegistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="45dp"
         android:background="@color/white"
         android:text="CREAR CUENTA"
         android:textAllCaps="false"
@@ -48,8 +47,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGoogle" />
+        app:layout_constraintStart_toEndOf="@+id/btnGoogle"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresar" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -82,8 +81,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="410dp"
-        android:layout_height="256dp"
+        android:layout_width="406dp"
+        android:layout_height="190dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,23 +111,11 @@
         android:layout_width="55dp"
         android:layout_height="50dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/aRegistrar"
-        app:layout_constraintEnd_toStartOf="@+id/btnFacebook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/aRegistrar"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnIngresar"
         app:srcCompat="@drawable/ic_launcher" />
-
-    <ImageButton
-        android:id="@+id/btnFacebook"
-        android:layout_width="55dp"
-        android:layout_height="50dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/aRegistrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnGoogle"
-        app:layout_constraintTop_toBottomOf="@+id/btnIngresar"
-        app:srcCompat="@drawable/ic_launcher_facebook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
