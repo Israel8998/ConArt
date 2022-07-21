@@ -4,6 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".VerDatos">
+
+    <TextView
+        android:id="@+id/txtVerDatos"
+        android:layout_width="74dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:background="#03A9F4"
+        android:text="VER DATOS"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="168dp" />
+
+    <EditText
+        android:id="@+id/txtDesde"
+        android:layout_width="174dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#03A9F4"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Desde"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <EditText
+        android:id="@+id/txtHasta"
+        android:layout_width="170dp"
+        android:layout_height="56dp"
+        android:backgroundTint="#03A9F4"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Hasta"
+        tools:layout_editor_absoluteX="219dp"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <TextView
+        android:id="@+id/txtFecha"
+        android:layout_width="43dp"
+        android:layout_height="21dp"
+        android:background="#03A9F4"
+        android:text="Fecha"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="123dp" />
+
+    <EditText
+        android:id="@+id/txtFechaResultado"
+        android:layout_width="208dp"
+        android:layout_height="37dp"
+        android:backgroundTint="#03A9F4"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="FechaResultado"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="115dp" />
+
+    <TableLayout
+        android:layout_width="410dp"
+        android:layout_height="458dp"
+        android:background="#03A9F4"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="272dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
