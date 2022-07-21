@@ -7,11 +7,15 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.util.PatternsCompat
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_crear_cuenta.*
 import kotlinx.android.synthetic.main.activity_iniciar_sesion.*
 import java.lang.NumberFormatException
 
 class CrearCuenta : AppCompatActivity() {
+
+    private val db = FirebaseFirestore.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crear_cuenta)
