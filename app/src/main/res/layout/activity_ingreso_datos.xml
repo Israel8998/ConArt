@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IngresoDatos">
+    tools:context=".IngresoDatos"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/lblProvider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome"
+        android:textColor="@color/black"
         tools:layout_editor_absoluteX="301dp"
         tools:layout_editor_absoluteY="99dp" />
 
@@ -19,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tipo ingreso"
+        android:textColor="@color/black"
         tools:layout_editor_absoluteX="213dp"
         tools:layout_editor_absoluteY="99dp" />
 
@@ -30,6 +33,7 @@
         android:layout_marginTop="19dp"
         android:layout_marginEnd="127dp"
         android:text="INGRESO DATOS"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:text="Fecha"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName" />
@@ -53,6 +58,9 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/txtTotal"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -63,6 +71,8 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="257dp"
         android:layout_marginEnd="2dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/black"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,34 +80,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtIngreso"
-        android:layout_width="0dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="63dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtEgreso"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTotal"
-        app:layout_constraintVertical_bias="0.05" />
-
-    <EditText
         android:id="@+id/txtEgreso"
         android:layout_width="0dp"
         android:layout_height="67dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="292dp"
+        android:layout_marginBottom="256dp"
         android:ems="10"
+        android:backgroundTint="@color/black"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -107,6 +101,7 @@
         android:layout_marginStart="7dp"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="160dp"
+        android:backgroundTint="@color/black"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -127,14 +122,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome"
+        android:textColor="@color/black"
         tools:layout_editor_absoluteX="94dp"
         tools:layout_editor_absoluteY="99dp" />
 
     <TextView
         android:id="@+id/lblCorreo"
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nombre"
+
         tools:layout_editor_absoluteX="23dp"
         tools:layout_editor_absoluteY="99dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
