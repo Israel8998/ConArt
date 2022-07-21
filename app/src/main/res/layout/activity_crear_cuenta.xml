@@ -32,6 +32,7 @@
         android:id="@+id/txtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#03A9F4"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword"
@@ -50,17 +51,22 @@
         android:id="@+id/txtCorreoUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#2196F3"
         android:ems="10"
         android:hint="Correo electrónico"
         android:inputType="textEmailAddress"
         tools:layout_editor_absoluteX="100dp"
         tools:layout_editor_absoluteY="177dp" />
 
-    <TextView
+    <EditText
         android:id="@+id/txtVerificarContraseña"
-        android:layout_width="210dp"
-        android:layout_height="51dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="359dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#03A9F4"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="VERIFICAR CONTRASEÑA"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="384dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
