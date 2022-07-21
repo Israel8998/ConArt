@@ -9,14 +9,15 @@
 
     <Button
         android:id="@+id/btnIngresar"
-        android:layout_width="296dp"
-        android:layout_height="41dp"
-        android:backgroundTint="#C5F3DF"
+        android:layout_width="313dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_inicio"
         android:text="Ingresar"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/btnGoogle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

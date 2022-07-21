@@ -4,6 +4,216 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConfiguracionPerfil">
+    tools:context=".ConfiguracionPerfil"
+    android:background="@color/white">
 
+    <ImageButton
+        android:id="@+id/btnLogOut3"
+        android:layout_width="40dp"
+        android:layout_height="36dp"
+        android:background="@null"
+        android:onClick="CerrarSesion"
+        app:srcCompat="@drawable/salida"
+        tools:layout_editor_absoluteX="362dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/btnRegresar2"
+        android:layout_width="57dp"
+        android:layout_height="49dp"
+        android:background="@null"
+        android:onClick="Regresar"
+        android:rotation="180"
+        android:src="@drawable/flecha_correcta"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="3dp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="***********"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="386dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="149dp"
+        android:layout_height="99dp"
+        android:src="@drawable/perfil_del_usuario"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="21dp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ayuda"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="275dp"
+        tools:layout_editor_absoluteY="691dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="41dp"
+        android:layout_height="25dp"
+        android:background="@null"
+        android:src="@drawable/editar"
+        tools:layout_editor_absoluteX="338dp"
+        tools:layout_editor_absoluteY="385dp" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Correo"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Contraseña"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="386dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton11"
+        android:layout_width="41dp"
+        android:layout_height="25dp"
+        android:background="@null"
+        android:textColor="@color/black"
+        android:src="@drawable/editar"
+        tools:layout_editor_absoluteX="338dp"
+        tools:layout_editor_absoluteY="202dp" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Numero teléfono"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="0987654321"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="41dp"
+        android:layout_height="25dp"
+        android:background="@null"
+        android:src="@drawable/editar"
+        tools:layout_editor_absoluteX="338dp"
+        tools:layout_editor_absoluteY="294dp" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Israel "
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="207dp" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="670dp" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Apellido"
+        android:textColor="@color/black"
+
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="252dp" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Configuracion de perfil"
+
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton13"
+        android:layout_width="41dp"
+        android:layout_height="25dp"
+        android:background="@null"
+        android:src="@drawable/editar"
+        tools:layout_editor_absoluteX="338dp"
+        tools:layout_editor_absoluteY="248dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="41dp"
+        android:layout_height="25dp"
+        android:background="@null"
+        android:src="@drawable/editar"
+        tools:layout_editor_absoluteX="338dp"
+        tools:layout_editor_absoluteY="339dp" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="207dp" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="IsraelP@gmail.com"
+        tools:layout_editor_absoluteX="175dp"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Pazmiño"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="252dp" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contactanos"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="691dp" />
+
+    <View
+        android:id="@+id/divider7"
+        android:layout_width="391dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="140dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
