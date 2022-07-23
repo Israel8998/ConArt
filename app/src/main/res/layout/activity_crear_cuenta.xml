@@ -13,12 +13,16 @@
         android:layout_width="194dp"
         android:layout_height="30dp"
         android:background="#CDDC39"
-        android:backgroundTint="#03A9F4"
+        android:backgroundTint="#FFFFFF"
         android:text="CREAR USUARIO"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="50dp" />
+        app:layout_constraintBottom_toTopOf="@+id/txtCorreoUsuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnRegistrar"
@@ -26,8 +30,11 @@
         android:layout_height="49dp"
         android:backgroundTint="#03A9F4"
         android:text="CREAR CUENTA"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="675dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnIniciarSesion"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVerificarContraseña" />
 
     <EditText
         android:id="@+id/txtPassword"
@@ -35,10 +42,14 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#03A9F4"
         android:ems="10"
-        android:hint="Contraseña"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="268dp" />
+        android:text="Contraseña"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtVerificarContraseña"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreoUsuario" />
 
     <Button
         android:id="@+id/btnIniciarSesion"
@@ -46,8 +57,12 @@
         android:layout_height="49dp"
         android:backgroundTint="#03A9F4"
         android:text="INICIAR SECION"
-        tools:layout_editor_absoluteX="235dp"
-        tools:layout_editor_absoluteY="675dp" />
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnRegistrar"
+        app:layout_constraintTop_toBottomOf="@+id/txtVerificarContraseña" />
 
     <EditText
         android:id="@+id/txtCorreoUsuario"
@@ -55,10 +70,14 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#2196F3"
         android:ems="10"
-        android:hint="Correo electrónico"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="177dp" />
+        android:text="Ingrese un correo"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/txtVerificarContraseña"
@@ -67,8 +86,12 @@
         android:backgroundTint="#03A9F4"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="VERIFICAR CONTRASEÑA"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="378dp" />
+        android:text="Verificar contraseña"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

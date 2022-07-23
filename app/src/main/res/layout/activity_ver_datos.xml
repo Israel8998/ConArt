@@ -9,13 +9,17 @@
 
     <TextView
         android:id="@+id/txtVerDatos"
-        android:layout_width="74dp"
-        android:layout_height="35dp"
+        android:layout_width="65dp"
+        android:layout_height="22dp"
         android:layout_marginTop="24dp"
-        android:background="#03A9F4"
-        android:text="VER DATOS"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="168dp" />
+        android:text="Ver datos"
+        android:textColor="@color/black"
+
+        app:layout_constraintBottom_toTopOf="@+id/txtFechaResultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtDesde"
@@ -25,8 +29,12 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Desde"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="208dp" />
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toStartOf="@+id/txtHasta"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaResultado" />
 
     <EditText
         android:id="@+id/txtHasta"
@@ -36,17 +44,24 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Hasta"
-        tools:layout_editor_absoluteX="219dp"
-        tools:layout_editor_absoluteY="209dp" />
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtDesde"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaResultado" />
 
     <TextView
         android:id="@+id/txtFecha"
         android:layout_width="43dp"
         android:layout_height="21dp"
-        android:background="#03A9F4"
         android:text="Fecha"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="123dp" />
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtDesde"
+        app:layout_constraintEnd_toStartOf="@+id/txtFechaResultado"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVerDatos" />
 
     <EditText
         android:id="@+id/txtFechaResultado"
@@ -56,15 +71,22 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="FechaResultado"
-        tools:layout_editor_absoluteX="121dp"
-        tools:layout_editor_absoluteY="115dp" />
+        app:layout_constraintBottom_toTopOf="@+id/txtDesde"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtFecha"
+        app:layout_constraintTop_toBottomOf="@+id/txtVerDatos" />
 
     <TableLayout
-        android:layout_width="410dp"
-        android:layout_height="458dp"
+        android:id="@+id/tableLayout"
+        android:layout_width="412dp"
+        android:layout_height="425dp"
         android:background="#03A9F4"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="272dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDesde">
 
         <TableRow
             android:layout_width="match_parent"
