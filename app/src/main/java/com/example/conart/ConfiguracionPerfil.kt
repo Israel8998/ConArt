@@ -62,6 +62,7 @@ class ConfiguracionPerfil : AppCompatActivity() {
 
     private fun CerrarSesion() { //Función del botón cerrar sesión
         FirebaseAuth.getInstance().signOut()
-        onBackPressed()
+        val IniciarSesionIntent = Intent(this, IniciarSesion::class.java)
+        startActivity(IniciarSesionIntent)
     }
 }
