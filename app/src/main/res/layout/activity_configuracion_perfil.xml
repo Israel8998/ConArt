@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/lblProveedor"
-        android:layout_width="130dp"
+        android:layout_width="180dp"
         android:layout_height="40dp"
         android:text="Correo o google"
         android:textAlignment="center"
@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/txtContraseñaConf" />
+        app:layout_constraintTop_toBottomOf="@+id/lblCorreo" />
 
     <TextView
         android:id="@+id/textView14"
@@ -32,7 +32,7 @@
         app:layout_constraintEnd_toStartOf="@+id/lblProveedor"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
     <ImageButton
         android:id="@+id/btnCerrarSesion"
@@ -50,14 +50,15 @@
         android:layout_width="149dp"
         android:layout_height="99dp"
         android:src="@drawable/perfil_del_usuario"
+        app:layout_constraintBottom_toTopOf="@+id/divider7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="36dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/txtNombreConf"
-        android:layout_width="130dp"
+        android:layout_width="180dp"
         android:layout_height="39dp"
         android:hint="Ingrese su nombre"
         android:textAlignment="center"
@@ -103,7 +104,7 @@
         android:text="Correo:"
         android:textAlignment="center"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textView27"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toStartOf="@+id/lblCorreo"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,13 +112,13 @@
 
     <TextView
         android:id="@+id/lblCorreo"
-        android:layout_width="130dp"
+        android:layout_width="180dp"
         android:layout_height="40dp"
-        android:text="IsraelP@gmail.com"
+        android:text="israel_pazmi@hotmail.com"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtContraseñaConf"
+        app:layout_constraintBottom_toTopOf="@+id/lblProveedor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView26"
@@ -138,9 +139,10 @@
 
     <EditText
         android:id="@+id/txtCelularConf"
-        android:layout_width="130dp"
+        android:layout_width="180dp"
         android:layout_height="39dp"
         android:hint="Número de celular"
+        android:inputType="number"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textColorHint="@color/Gris"
@@ -151,37 +153,9 @@
         app:layout_constraintStart_toEndOf="@+id/textView28"
         app:layout_constraintTop_toBottomOf="@+id/txtApellidoConf" />
 
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:text="Contraseña:"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
-        app:layout_constraintEnd_toStartOf="@+id/txtContraseñaConf"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
-    <EditText
-        android:id="@+id/txtContraseñaConf"
-        android:layout_width="130dp"
-        android:layout_height="40dp"
-        android:hint="Contraseña"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textColorHint="@color/Gris"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/lblProveedor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView27"
-        app:layout_constraintTop_toBottomOf="@+id/lblCorreo" />
-
     <EditText
         android:id="@+id/txtApellidoConf"
-        android:layout_width="130dp"
+        android:layout_width="180dp"
         android:layout_height="39dp"
         android:hint="Ingrese su apellido"
         android:textAlignment="center"
@@ -220,7 +194,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnPantallaPrincipal"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="Pantalla Principal"
@@ -239,7 +213,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPantallaPrincipal" />
 
     <TextView
         android:id="@+id/textView25"
@@ -270,7 +244,7 @@
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="Guardar"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/btnPantallaPrincipal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

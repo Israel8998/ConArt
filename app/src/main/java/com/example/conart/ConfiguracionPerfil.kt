@@ -1,6 +1,7 @@
 package com.example.conart
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
@@ -30,13 +31,18 @@ class ConfiguracionPerfil : AppCompatActivity() {
         btnGuardar.setOnClickListener {
             if (email != null) {
                 db.collection("Usuarios").document(email).set(
-                    hashMapOf("Nombre" to txtNombreConf,
-                    "Apellido" to txtApellidoConf,
-                    "Número celular" to txtCelularConf,
-                    "Contraseña" to txtContraseñaConf,
-                    "Provider" to lblProveedor)
+                    hashMapOf("Nombre" to txtNombreConf.text.toString(),
+                    "Apellido" to txtApellidoConf.text.toString(),
+                    "Número celular" to txtCelularConf.text.toString(),
+                    "Proveedor" to lblProveedor)
                 )
             }
+        }
+
+        //botón para ir a la pantalla principal
+        btnPantallaPrincipal.setOnClickListener {
+            val IngresoDatosIntent = Intent(this, IngresoDatos::class.java)
+            startActivity(IngresoDatosIntent)
         }
     }
 

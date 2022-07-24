@@ -90,10 +90,7 @@ class IniciarSesion : AppCompatActivity() {
 
     //Envío a otra pantalla en caso de tener éxito al iniciar sesión
     private fun showIngresoDatos(email: String, provider: ProviderType) {
-        val IngresoDatosIntent = Intent(this, ConfiguracionPerfil::class.java).apply{
-            putExtra("email", email)
-            putExtra("provider", provider.name)
-        }
+        val IngresoDatosIntent = Intent(this, IngresoDatos::class.java)
         startActivity(IngresoDatosIntent)
     }
 

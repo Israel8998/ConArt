@@ -38,25 +38,27 @@ class CrearCuenta : AppCompatActivity() {
         btnRegistrar.setOnClickListener {
                 if (txtCorreoUsuario.text.isNotEmpty()) { //Comprobar que no esté vacío el texto del correo
                     if (txtPassword.text.isNotEmpty()) { //Comprobar que no esté vacío el texto de la contraseña
-                        if (txtPassword.length() >= 6) { //Comprobar que tenga el mínimo de caracteres en contraseña
-                            if (PatternsCompat.EMAIL_ADDRESS.matcher(txtCorreoUsuario.text.toString()).matches()) {
-                                FirebaseAuth.getInstance()
-                                    .createUserWithEmailAndPassword( //Función para crear cuenta
-                                        txtCorreoUsuario.text.toString(),
-                                        txtPassword.text.toString() //Envío a la BDD
-                                    ).addOnCompleteListener {
-                                    if (it.isSuccessful) { //Condición en caso de tener éxito
-                                        showSatisfaction()
-                                        showConfiguracion(it.result?.user?.email?: "", ProviderType.BASIC)
-                                    } else { //Condición en caso de estar algo mal
-                                        showAlert()
+                        if (PatternsCompat.EMAIL_ADDRESS.matcher(txtCorreoUsuario.text.toString()).matches()) {
+                            if (txtPassword.length() >= 6) { //Comprobar que tenga el mínimo de caracteres en contraseña
+                                if(txtPassword.text.toString() == txtVerificarContraseña.text.toString()){
+                                    FirebaseAuth.getInstance().createUserWithEmailAndPassword( //Función para crear cuenta
+                                        txtCorreoUsuario.text.toString(), txtPassword.text.toString() //Envío a la BDD
+                                        ).addOnCompleteListener {
+                                        if (it.isSuccessful) { //Condición en caso de tener éxito
+                                            showSatisfaction()
+                                            showConfiguracion(it.result?.user?.email ?: "", ProviderType.BASIC)
+                                        } else { //Condición en caso de estar algo mal
+                                            showAlert()
+                                        }
                                     }
+                                } else{
+                                    txtVerificarContraseña.setError("Contraseña incorrecta")
                                 }
-                            } else{
-                                txtCorreoUsuario.setError("Ingrese un correo válido")
+                            } else { //Mensaje error para la cantidad mínima de caracteres en contraseña
+                                txtPassword.setError("La contraseña debe tener mínimo 6 caracteres")
                             }
-                        } else { //Mensaje error para la cantidad mínima de caracteres en contraseña
-                            txtPassword.setError("La contraseña debe tener mínimo 6 caracteres")
+                        } else{
+                            txtCorreoUsuario.setError("Ingrese un correo válido")
                         }
                     } else { //Mensaje error si está vacío el campo de la contraseña
                         txtPassword.setError("La contraseña no puede estar vacía")
@@ -67,8 +69,8 @@ class CrearCuenta : AppCompatActivity() {
         }
 
         btnIniciarSesion.setOnClickListener { //Función botón para regresar a pantalla de configuración perfil
-            val confPerf = Intent(this, ConfiguracionPerfil::class.java)
-            startActivity(confPerf)
+            val IniciarSesionIntent = Intent(this, IniciarSesion::class.java)
+            startActivity(IniciarSesionIntent)
         }
     }
 
