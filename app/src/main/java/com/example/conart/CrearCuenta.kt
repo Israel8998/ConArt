@@ -47,7 +47,7 @@ class CrearCuenta : AppCompatActivity() {
                                     ).addOnCompleteListener {
                                     if (it.isSuccessful) { //Condición en caso de tener éxito
                                         showSatisfaction()
-                                        showIngresoDatos(it.result?.user?.email?: "", ProviderType.BASIC)
+                                        showConfiguracion(it.result?.user?.email?: "", ProviderType.BASIC)
                                     } else { //Condición en caso de estar algo mal
                                         showAlert()
                                     }
@@ -66,9 +66,9 @@ class CrearCuenta : AppCompatActivity() {
                 }
         }
 
-        btnIniciarSesion.setOnClickListener { //Función botón para regresar a pantalla de iniciar sesión
-            val iniciarSesion = Intent(this, IniciarSesion::class.java)
-            startActivity(iniciarSesion)
+        btnIniciarSesion.setOnClickListener { //Función botón para regresar a pantalla de configuración perfil
+            val confPerf = Intent(this, ConfiguracionPerfil::class.java)
+            startActivity(confPerf)
         }
     }
 
@@ -92,10 +92,11 @@ class CrearCuenta : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun showIngresoDatos(email: String, provider: ProviderType) {
-        val IngresoDatosIntent = Intent(this, IngresoDatos::class.java).apply{
+    private fun showConfiguracion(email: String, provider: ProviderType) {
+        val ConfiguracionIntent = Intent(this, ConfiguracionPerfil::class.java).apply{
             putExtra("email", email)
             putExtra("provider", provider.name)
         }
+        startActivity(ConfiguracionIntent)
     }
 }
