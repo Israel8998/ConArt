@@ -40,7 +40,7 @@ class CrearCuenta : AppCompatActivity() {
                     if (txtPassword.text.isNotEmpty()) { //Comprobar que no esté vacío el texto de la contraseña
                         if (PatternsCompat.EMAIL_ADDRESS.matcher(txtCorreoUsuario.text.toString()).matches()) {
                             if (txtPassword.length() >= 6) { //Comprobar que tenga el mínimo de caracteres en contraseña
-                                if(txtPassword.text.toString() == txtVerificarContraseña.text.toString()){
+                                if(txtPassword.text.toString().trim() == txtVerificarContraseña.text.toString().trim()) {
                                     FirebaseAuth.getInstance().createUserWithEmailAndPassword( //Función para crear cuenta
                                         txtCorreoUsuario.text.toString(), txtPassword.text.toString() //Envío a la BDD
                                         ).addOnCompleteListener {
