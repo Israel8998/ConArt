@@ -7,33 +7,6 @@
     android:background="@color/white"
     tools:context=".ConfiguracionPerfil">
 
-    <TextView
-        android:id="@+id/lblProveedor"
-        android:layout_width="180dp"
-        android:layout_height="40dp"
-        android:text="Correo o google"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnGuardar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/lblCorreo" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:text="Proveedor:"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/btnGuardar"
-        app:layout_constraintEnd_toStartOf="@+id/lblProveedor"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView26" />
-
     <ImageButton
         android:id="@+id/btnCerrarSesion"
         android:layout_width="40dp"
@@ -78,6 +51,7 @@
         android:text="Configuracion de perfil"
 
         android:textColor="@color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/txtNombreConf"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -104,7 +78,7 @@
         android:text="Correo:"
         android:textAlignment="center"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuardar"
         app:layout_constraintEnd_toStartOf="@+id/lblCorreo"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,7 +92,7 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/lblProveedor"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuardar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView26"
@@ -248,6 +222,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblProveedor" />
+        app:layout_constraintTop_toBottomOf="@+id/lblCorreo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

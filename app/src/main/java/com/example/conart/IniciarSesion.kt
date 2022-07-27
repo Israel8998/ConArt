@@ -27,9 +27,8 @@ class IniciarSesion : AppCompatActivity() {
     private fun session() {
         val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE)
         val email = prefs.getString("email", null)
-        val provider = prefs.getString("provider", null)
-        if(email != null && provider != null){
-            showIngresoDatos(email, ProviderType.valueOf(provider))
+        if(email != null){
+            showIngresoDatos(email)
         }
     }
 
@@ -52,7 +51,7 @@ class IniciarSesion : AppCompatActivity() {
                             txtCorreo.text.toString(), txtContraseña.text.toString() //Envío de valores
                             ).addOnCompleteListener {
                             if (it.isSuccessful) { //Condición en caso de tener éxito
-                                showIngresoDatos(it.result?.user?.email?:"", ProviderType.BASIC)
+                                showIngresoDatos(it.result?.user?.email?:"")
                             } else { //Condición en caso de estar algo mal
                                 showAlert()
                             }
@@ -89,8 +88,10 @@ class IniciarSesion : AppCompatActivity() {
     }
 
     //Envío a otra pantalla en caso de tener éxito al iniciar sesión
-    private fun showIngresoDatos(email: String, provider: ProviderType) {
-        val IngresoDatosIntent = Intent(this, IngresoDatos::class.java)
+    private fun showIngresoDatos(email: String) {
+        val IngresoDatosIntent = Intent(this, IngresoDatos::class.java).apply{
+            putExtra("email", email)
+        }
         startActivity(IngresoDatosIntent)
     }
 
@@ -107,7 +108,7 @@ class IniciarSesion : AppCompatActivity() {
                     FirebaseAuth.getInstance().signInWithCredential(credential)
                         .addOnCompleteListener {
                             if (it.isSuccessful) { //Condición en caso de tener éxito
-                                showIngresoDatos(account.email ?: "", ProviderType.GOOGLE)
+                                showIngresoDatos(account.email ?: "")
                             } else {
                                 showAlert()
                             }

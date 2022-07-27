@@ -46,7 +46,7 @@ class CrearCuenta : AppCompatActivity() {
                                         ).addOnCompleteListener {
                                         if (it.isSuccessful) { //Condición en caso de tener éxito
                                             showSatisfaction()
-                                            showConfiguracion(it.result?.user?.email ?: "", ProviderType.BASIC)
+                                            showConfiguracion(it.result?.user?.email ?: "")
                                         } else { //Condición en caso de estar algo mal
                                             showAlert()
                                         }
@@ -94,10 +94,9 @@ class CrearCuenta : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun showConfiguracion(email: String, provider: ProviderType) {
+    private fun showConfiguracion(email: String) {
         val ConfiguracionIntent = Intent(this, ConfiguracionPerfil::class.java).apply{
             putExtra("email", email)
-            putExtra("provider", provider.name)
         }
         startActivity(ConfiguracionIntent)
     }

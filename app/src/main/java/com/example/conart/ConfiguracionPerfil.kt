@@ -4,14 +4,10 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_configuracion_perfil.*
-
-enum class ProviderType {
-    BASIC,
-    GOOGLE
-}
 
 class ConfiguracionPerfil : AppCompatActivity() {
 
@@ -24,8 +20,7 @@ class ConfiguracionPerfil : AppCompatActivity() {
         //Setup
         val bundle = intent.extras
         val email = bundle?.getString("email")
-        val provider = bundle?.getString("provider")
-        setup(email ?: "", provider ?: "")
+        setup(email ?: "")
 
         //Guardar
         btnGuardar.setOnClickListener {
@@ -33,23 +28,39 @@ class ConfiguracionPerfil : AppCompatActivity() {
                 db.collection("Usuarios").document(email).set(
                     hashMapOf("Nombre" to txtNombreConf.text.toString(),
                     "Apellido" to txtApellidoConf.text.toString(),
-                    "Número celular" to txtCelularConf.text.toString(),
-                    "Proveedor" to lblProveedor)
+                    "Número celular" to txtCelularConf.text.toString())
                 )
+                showSatisfaction()
             }
         }
 
         //botón para ir a la pantalla principal
         btnPantallaPrincipal.setOnClickListener {
-            val IngresoDatosIntent = Intent(this, IngresoDatos::class.java)
-            startActivity(IngresoDatosIntent)
+            showPantallaPrincipal(email ?: "")
+        }
+
+        //Cargar datos en los campos correspondientes
+        if(email != null) {
+            db.collection("Usuarios").document(email).get().addOnSuccessListener {
+                txtNombreConf.setText(it.get("Nombre") as String?)
+                txtApellidoConf.setText(it.get("Apellido") as String?)
+                txtCelularConf.setText(it.get("Número celular") as String?)
+            }
+        } else {
+            showAlert()
         }
     }
 
-    private fun setup(email: String, provider: String){
+    private fun showPantallaPrincipal(email: String) {
+        val IngresoDatosIntent = Intent(this, IngresoDatos::class.java).apply {
+            putExtra("email", email)
+        }
+        startActivity(IngresoDatosIntent)
+    }
+
+    private fun setup(email: String){
         title = "Configuración de perfil"
         lblCorreo.text = email
-        lblProveedor.text = provider
 
         btnCerrarSesion.setOnClickListener {
             //Borrado de datos
@@ -64,5 +75,23 @@ class ConfiguracionPerfil : AppCompatActivity() {
         FirebaseAuth.getInstance().signOut()
         val IniciarSesionIntent = Intent(this, IniciarSesion::class.java)
         startActivity(IniciarSesionIntent)
+    }
+
+    private fun showSatisfaction() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Guardado exitoso") //Título del poop up
+        builder.setMessage("Los datos ingresados se han guardado con éxito") //Mensaje del Poop up
+        builder.setPositiveButton("Aceptar", null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
+    private fun showAlert() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Error") //Título del poop up del error
+        builder.setMessage("Los datos no se han podido guardar") //Descripción del error
+        builder.setPositiveButton("Aceptar", null) //botón para cerra el poop up
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
     }
 }
