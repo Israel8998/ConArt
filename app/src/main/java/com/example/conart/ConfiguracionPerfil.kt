@@ -22,7 +22,7 @@ class ConfiguracionPerfil : AppCompatActivity() {
         val email = bundle?.getString("email")
         setup(email ?: "")
 
-        //Guardar
+        //Guardar en la base de datos
         btnGuardar.setOnClickListener {
             if (email != null) {
                 db.collection("Usuarios").document(email).set(
@@ -39,7 +39,7 @@ class ConfiguracionPerfil : AppCompatActivity() {
             showPantallaPrincipal(email ?: "")
         }
 
-        //Cargar datos en los campos correspondientes
+        //Cargar datos en los campos correspondientes al configurar perfil
         if(email != null) {
             db.collection("Usuarios").document(email).get().addOnSuccessListener {
                 txtNombreConf.setText(it.get("Nombre") as String?)
