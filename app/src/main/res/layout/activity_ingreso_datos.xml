@@ -98,7 +98,7 @@
         android:id="@+id/divider"
         android:layout_width="391dp"
         android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
+        android:background="@color/Gris"
         app:layout_constraintBottom_toTopOf="@+id/btnIngresos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -109,7 +109,7 @@
         android:id="@+id/divider2"
         android:layout_width="391dp"
         android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
+        android:background="@color/Gris"
         app:layout_constraintBottom_toTopOf="@+id/textView11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -156,7 +156,7 @@
         android:id="@+id/divider4"
         android:layout_width="391dp"
         android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
+        android:background="@color/Gris"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -169,9 +169,10 @@
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
+        android:background="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_manage" />
+        app:srcCompat="@drawable/ajuste" />
 
     <TextView
         android:id="@+id/textView6"
