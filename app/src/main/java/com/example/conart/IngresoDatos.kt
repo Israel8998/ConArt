@@ -5,22 +5,14 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.widget.EditText
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.Timestamp
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_configuracion_perfil.*
 import kotlinx.android.synthetic.main.activity_ingreso_datos.*
-import kotlinx.android.synthetic.main.cuadro_dialogo.*
 import kotlinx.android.synthetic.main.cuadro_dialogo.view.*
-import java.text.DateFormat
 import java.text.SimpleDateFormat
-import java.time.Instant
 import java.util.*
 
 
@@ -63,9 +55,6 @@ class IngresoDatos : AppCompatActivity() {
             //Asignando valores
             val ventana = AlertDialog.Builder(this)
             val view = layoutInflater.inflate(R.layout.cuadro_dialogo, null)
-
-            //llamar del cuadro_dialogo
-            var botonGuardar = view.btnGuardarDA
             
             //pasando vista al builder
             ventana.setView(view)
@@ -75,7 +64,7 @@ class IngresoDatos : AppCompatActivity() {
             dialog.show()
 
             //Guardar datos en base de datos al dar click en guardar
-            botonGuardar.setOnClickListener {
+            view.btnGuardarDA.setOnClickListener {
                 if (email != null) {
                     if(view.txtIngresoValorDA.text.isNotEmpty()) {
                         db.collection("Ingresos").document(email).set(
@@ -100,13 +89,11 @@ class IngresoDatos : AppCompatActivity() {
             }
         }
 
+        //función del botón para colocar egresos
         btnEgresos.setOnClickListener {
             //Asignando valores
             val ventana = AlertDialog.Builder(this)
             val view = layoutInflater.inflate(R.layout.cuadro_dialogo, null)
-
-            //Botones del cuadro_dialogo
-            var botonGuardar = view.btnGuardarDA
 
             //pasando vista al builder
             ventana.setView(view)
@@ -116,13 +103,13 @@ class IngresoDatos : AppCompatActivity() {
             dialog.show()
 
             //Guardar datos en base de datos
-            botonGuardar.setOnClickListener {
+            view.btnGuardarDA.setOnClickListener {
                 if(view.txtIngresoValorDA.text.isNotEmpty()) {
                     if (email != null) {
                         db.collection("Egresos").document(email).set(
                             hashMapOf(
                                 "Fecha" to Timestamp(Date()),
-                                "Cantidad" to view.txtIngresoValorDA.text.toString(),
+                                "Valor" to view.txtIngresoValorDA.text.toString(),
                                 "Descripción" to view.txtDescripcionDA.text.toString()
                             )
                         )
