@@ -33,8 +33,9 @@
         android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="51dp"
+        android:backgroundTint="@color/black"
         android:ems="10"
-        android:hint="Ejemplo: corte cabello"
+        android:hint="Corte cabello, tinte"
         android:inputType="textPersonName"
         android:textColor="@color/black"
         android:textColorHint="@color/Gris"
@@ -48,8 +49,9 @@
         android:id="@+id/txtIngresoValorDA"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
         android:ems="10"
-        android:hint="Ejemplo: 1,22"
+        android:hint="1.22"
         android:inputType="numberDecimal"
         android:textColor="@color/black"
         android:textColorHint="@color/Gris"
@@ -62,14 +64,14 @@
         android:id="@+id/textView2"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="51dp"
+        android:layout_marginTop="43dp"
         android:text="Ingrese el valor"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/txtIngresoValorDA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/textView3"
@@ -83,4 +85,17 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtIngresoValorDA" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingreso de datos"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
