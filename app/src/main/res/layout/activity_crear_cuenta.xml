@@ -68,7 +68,7 @@
         android:id="@+id/txtCorreoUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#2196F3"
+        android:backgroundTint="#03A9F4"
         android:ems="10"
         android:hint="Ingrese correo"
         android:inputType="textEmailAddress"

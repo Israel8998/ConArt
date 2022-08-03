@@ -26,9 +26,11 @@ class ConfiguracionPerfil : AppCompatActivity() {
         btnGuardar.setOnClickListener {
             if (email != null) {
                 db.collection("Usuarios").document(email).set(
-                    hashMapOf("Nombre" to txtNombreConf.text.toString(),
-                    "Apellido" to txtApellidoConf.text.toString(),
-                    "Número celular" to txtCelularConf.text.toString())
+                    hashMapOf(
+                        "Nombre" to txtNombreConf.text.toString(),
+                        "Apellido" to txtApellidoConf.text.toString(),
+                        "Número celular" to txtCelularConf.text.toString()
+                    )
                 )
                 showSatisfaction()
             }
