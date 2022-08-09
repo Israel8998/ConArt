@@ -8,7 +8,7 @@
     tools:context=".ObtenerDatos">
 
     <Button
-        android:id="@+id/btnIniciarSesion3"
+        android:id="@+id/btnRegresar"
         android:layout_width="40dp"
         android:layout_height="36dp"
         android:layout_marginStart="10dp"
