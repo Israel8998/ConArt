@@ -1,21 +1,21 @@
 package com.example.conart
 
+import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.Timestamp
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_ingreso_datos.*
 import kotlinx.android.synthetic.main.cuadro_dialogo.view.*
 import java.text.SimpleDateFormat
+import java.time.LocalDateTime.now
 import java.util.*
 
 
@@ -44,16 +44,16 @@ class IngresoDatos : AppCompatActivity() {
             }
         }
 
-        //Cargar los totales correspondientes
-        /*val mRootReference = object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                TODO("Not yet implemented")
+        //Al aplastar el botón ir a pantalla de ver Datos
+        btnVerDatos.setOnClickListener {
+            val showDatos = Intent(this, ObtenerDatos::class.java).apply{
+                putExtra("email", email)
             }
-
-        }*/
+            startActivity(showDatos)
+        }
 
         //Cargar la fecha actual
-        lblCalendario.text = SimpleDateFormat("dd/MM/yyyy").format(Date())
+        lblCalendario.text = SimpleDateFormat("yyyy/MM/dd").format(Date())
 
         //botón para ir a la pantalla de configuración
         btnConfiguracion.setOnClickListener {
@@ -77,19 +77,20 @@ class IngresoDatos : AppCompatActivity() {
             view.btnGuardarDA.setOnClickListener {
                 if (email != null) {
                     if(view.txtIngresoValorDA.text.isNotEmpty()) {
-                        db.collection("Movimientos").document(email).collection("Ingresos").document().set(
+                        db.collection("Movimientos").document(email).collection("Libro diario").document(now().toString()).set(
                             hashMapOf(
-                                    "Fecha" to Timestamp(Date()),
-                                    "Valor" to view.txtIngresoValorDA.text.toString(),
+                                    "Fecha" to SimpleDateFormat("yyyy/MM/dd").format(Date()).toString(),
+                                    "Valor" to view.txtIngresoValorDA.text.toString().toFloat(),
                                     "Descripción" to view.txtDescripcionDA.text.toString()
                             )
                         )
+                        dialog.hide()
+                        Toast.makeText(this, "Ingreso guardado", Toast.LENGTH_LONG).show()
                     } else {
-                        view.txtIngresoValorDA.setError("Llenar este campo para poder guardar")
+                        dialog.hide()
+                        Toast.makeText(this, "El valor no puede estar vacío", Toast.LENGTH_LONG).show()
                     }
                 }
-                dialog.hide()
-                Toast.makeText(this, "Dato Ingreso guardado", Toast.LENGTH_LONG).show()
             }
 
             //Acción al dar click en cancelar
@@ -114,27 +115,41 @@ class IngresoDatos : AppCompatActivity() {
 
             //Guardar datos en base de datos
             view.btnGuardarDA.setOnClickListener {
-                if(view.txtIngresoValorDA.text.isNotEmpty()) {
-                    if (email != null) {
-                        db.collection("Movimientos").document(email).collection("Egresos").document().set(
+                if (email != null) {
+                    if(view.txtIngresoValorDA.text.isNotEmpty()) {
+                        db.collection("Movimientos").document(email).collection("Libro diario").document(now().toString()).set(
                             hashMapOf(
-                                "Fecha" to Timestamp(Date()),
-                                "Valor" to view.txtIngresoValorDA.text.toString(),
+                                "Fecha" to SimpleDateFormat("yyyy/MM/dd").format(Date()).toString(),
+                                "Valor" to view.txtIngresoValorDA.text.toString().toFloat() * -1,
                                 "Descripción" to view.txtDescripcionDA.text.toString()
                             )
                         )
+                        dialog.hide()
+                        Toast.makeText(this, "Egreso guardado", Toast.LENGTH_LONG).show()
+                    } else {
+                        dialog.hide()
+                        Toast.makeText(this, "El valor no puede estar vacío", Toast.LENGTH_LONG).show()
                     }
-                } else {
-                    view.txtIngresoValorDA.setError("Llenar este campo para poder guardar")
                 }
-                dialog.hide()
-                Toast.makeText(this, "Dato Egreso guardado", Toast.LENGTH_LONG).show()
             }
 
             //Acción al dar click en cancelar
             view.btnCancelarDA.setOnClickListener {
                 dialog.hide()
                 Toast.makeText(this, "Cancelado", Toast.LENGTH_LONG).show()
+            }
+        }
+
+        //Cargar valor total ingresado
+        var suma: Float = 0F //Crear variable acumulativa
+        if (email != null) {
+            db.collection("Movimientos").document(email).collection("Libro diario")
+                .get().addOnSuccessListener { //búsqueda para calcular
+                for (document in it) { //recorrer todos los documentos de la tabla "libro darios"
+                    var valor = document.get("Valor") //Almacenar variable deceada
+                    suma += valor.toString().toFloat() //Sumar variable traida de la base de datos
+                }
+                lblTotal.setText(String.format("%.2f", suma)) //Mostrar el resultado en el label
             }
         }
     }

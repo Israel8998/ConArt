@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.conart">
+    package="com.example.conart" >
 
     <application
         android:allowBackup="true"
@@ -12,12 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
-        tools:targetApi="31">
-        <activity
-            android:name=".ConfiguracionPerfil"
-            android:exported="false" />
+        tools:targetApi="31" >
         <activity
             android:name=".VerDatos"
+            android:exported="false" />
+        <activity
+            android:name=".ObtenerDatos"
+            android:exported="false" />
+        <activity
+            android:name=".ConfiguracionPerfil"
             android:exported="false" />
         <activity
             android:name=".IngresoDatos"
@@ -27,7 +30,7 @@
             android:exported="false" />
         <activity
             android:name=".IniciarSesion"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
