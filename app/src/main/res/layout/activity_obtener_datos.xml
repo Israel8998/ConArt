@@ -7,6 +7,22 @@
     android:background="@color/white"
     tools:context=".ObtenerDatos">
 
+    <Button
+        android:id="@+id/btnIniciarSesion3"
+        android:layout_width="40dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        android:foreground="@drawable/flecha_correcta"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/txtVerDatos"
         android:layout_width="wrap_content"
@@ -76,17 +92,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/txtVerDatos" />
-
-    <ImageButton
-        android:id="@+id/btnRegresar"
-        android:layout_width="57dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/white"
-        android:rotation="180"
-        android:src="@drawable/flecha_correcta"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
