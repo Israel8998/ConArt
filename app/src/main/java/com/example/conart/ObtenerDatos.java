@@ -17,8 +17,6 @@ import com.google.firebase.firestore.Query;
 
 public class ObtenerDatos extends AppCompatActivity {
 
-    private ImageButton regresar;
-
     RecyclerView mRecycler;
     MovimientoAdapter mAdapter;
     FirebaseFirestore mFirestore;
@@ -32,18 +30,6 @@ public class ObtenerDatos extends AppCompatActivity {
         Intent intent = this.getIntent();
         Bundle extra = intent.getExtras();
         String email = extra.getString("email");
-
-        //configurar botón regresa
-        ImageButton regresar = findViewById(R.id.btnRegresar);
-
-        regresar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent regresar = new Intent(ObtenerDatos.this, IngresoDatos.class);
-                regresar.putExtra("email", email);
-                startActivity(regresar);
-            }
-        });
 
         mFirestore = FirebaseFirestore.getInstance();
         mRecycler = findViewById(R.id.recyclerViewSingle);
@@ -67,5 +53,16 @@ public class ObtenerDatos extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         mAdapter.stopListening();
+    }
+
+    public void regresar(View view) {
+        //obtener y enviar valores de una pantalla a otra
+        Intent intent = this.getIntent();
+        Bundle extra = intent.getExtras();
+        String email = extra.getString("email");
+
+        Intent regresar = new Intent(ObtenerDatos.this, IngresoDatos.class);
+        regresar.putExtra("email", email);
+        startActivity(regresar);
     }
 }

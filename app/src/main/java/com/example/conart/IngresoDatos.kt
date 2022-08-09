@@ -1,5 +1,6 @@
 package com.example.conart
 
+import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
@@ -23,6 +24,7 @@ class IngresoDatos : AppCompatActivity() {
 
     private val db = FirebaseFirestore.getInstance()
 
+    @SuppressLint("SimpleDateFormat")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +56,7 @@ class IngresoDatos : AppCompatActivity() {
 
         //Cargar la fecha actual
         lblCalendario.text = SimpleDateFormat("yyyy/MM/dd").format(Date())
+        val Mensual = SimpleDateFormat("yyyy/MM").format(Date()).toString()
 
         //botón para ir a la pantalla de configuración
         btnConfiguracion.setOnClickListener {
@@ -79,9 +82,10 @@ class IngresoDatos : AppCompatActivity() {
                     if(view.txtIngresoValorDA.text.isNotEmpty()) {
                         db.collection("Movimientos").document(email).collection("Libro diario").document(now().toString()).set(
                             hashMapOf(
-                                    "Fecha" to SimpleDateFormat("yyyy/MM/dd").format(Date()).toString(),
+                                    "Fecha" to lblCalendario.text.toString(),
                                     "Valor" to view.txtIngresoValorDA.text.toString().toFloat(),
-                                    "Descripción" to view.txtDescripcionDA.text.toString()
+                                    "Descripción" to view.txtDescripcionDA.text.toString(),
+                                    "Mensual" to Mensual
                             )
                         )
                         dialog.hide()
@@ -119,9 +123,10 @@ class IngresoDatos : AppCompatActivity() {
                     if(view.txtIngresoValorDA.text.isNotEmpty()) {
                         db.collection("Movimientos").document(email).collection("Libro diario").document(now().toString()).set(
                             hashMapOf(
-                                "Fecha" to SimpleDateFormat("yyyy/MM/dd").format(Date()).toString(),
+                                "Fecha" to lblCalendario.text.toString(),
                                 "Valor" to view.txtIngresoValorDA.text.toString().toFloat() * -1,
-                                "Descripción" to view.txtDescripcionDA.text.toString()
+                                "Descripción" to view.txtDescripcionDA.text.toString(),
+                                "Mensual" to Mensual
                             )
                         )
                         dialog.hide()
@@ -164,6 +169,19 @@ class IngresoDatos : AppCompatActivity() {
                 }
                 lblTotalDiario.setText(String.format("%.2f", sumaDiario)) //Mostrar el resultado en el label
             }
+        }
+
+        //Cargar valor total mensual ingresado
+        var sumaMensual: Float = 0F //Crear variable acumulativa
+        if (email != null) {
+            db.collection("Movimientos").document(email).collection("Libro diario")
+                .whereEqualTo("Mensual", Mensual).get().addOnSuccessListener { //búsqueda para calcular
+                    for (document in it) { //recorrer todos los documentos de la tabla "libro darios"
+                        var valorMensual = document.get("Valor") //Almacenar variable deceada
+                        sumaMensual += valorMensual.toString().toFloat() //Sumar variable traida de la base de datos
+                    }
+                    lblTotalMensual.setText(String.format("%.2f", sumaMensual)) //Mostrar el resultado en el label
+                }
         }
     }
 
