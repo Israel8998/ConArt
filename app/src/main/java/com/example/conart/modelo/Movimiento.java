@@ -1,10 +1,11 @@
 package com.example.conart.modelo;
 
 public class Movimiento {
-    String Descripción, Fecha, Valor;
+    String Descripción, Fecha;
+    Float Valor;
     public Movimiento() {}
 
-    public Movimiento(String descripción, String fecha, String valor) {
+    public Movimiento(String descripción, String fecha, Float valor) {
         Descripción = descripción;
         Fecha = fecha;
         Valor = valor;
@@ -26,11 +27,11 @@ public class Movimiento {
         Fecha = fecha;
     }
 
-    public String getValor() {
+    public Float getValor() {
         return Valor;
     }
 
-    public void setValor(String valor) {
+    public void setValor(Float valor) {
         Valor = valor;
     }
 }

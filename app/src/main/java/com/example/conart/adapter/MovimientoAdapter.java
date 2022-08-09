@@ -27,7 +27,7 @@ public class MovimientoAdapter extends FirestoreRecyclerAdapter<Movimiento, Movi
     @Override
     protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull Movimiento model) {
         holder.fecha.setText(model.getFecha());
-        holder.valor.setText(model.getValor());
+        holder.valor.setText(model.getValor().toString());
         holder.descripción.setText(model.getDescripción());
     }
 
