@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_configuracion_perfil.xml" value="0.25" />
+        <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_crear_cuenta.xml" value="0.15321849501359927" />
+        <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_ingreso_datos.xml" value="0.25" />
+        <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_iniciar_sesion.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_obtener_datos.xml" value="0.22" />
+        <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/activity_ver_datos.xml" value="0.25" />
+        <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/cuadro_dialogo.xml" value="0.25" />
+        <entry key="..\:/Users/israe/AndroidStudioProjects/ConArt/app/src/main/res/layout/view_movimientos_single.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>

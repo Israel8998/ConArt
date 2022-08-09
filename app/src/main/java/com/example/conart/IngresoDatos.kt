@@ -141,15 +141,28 @@ class IngresoDatos : AppCompatActivity() {
         }
 
         //Cargar valor total ingresado
-        var suma: Float = 0F //Crear variable acumulativa
+        var sumaTotal: Float = 0F //Crear variable acumulativa
         if (email != null) {
             db.collection("Movimientos").document(email).collection("Libro diario")
                 .get().addOnSuccessListener { //búsqueda para calcular
                 for (document in it) { //recorrer todos los documentos de la tabla "libro darios"
-                    var valor = document.get("Valor") //Almacenar variable deceada
-                    suma += valor.toString().toFloat() //Sumar variable traida de la base de datos
+                    var valorTotal = document.get("Valor") //Almacenar variable deceada
+                    sumaTotal += valorTotal.toString().toFloat() //Sumar variable traida de la base de datos
                 }
-                lblTotal.setText(String.format("%.2f", suma)) //Mostrar el resultado en el label
+                lblTotal.setText(String.format("%.2f", sumaTotal)) //Mostrar el resultado en el label
+            }
+        }
+
+        //Cargar valor total diario ingresado
+        var sumaDiario: Float = 0F //Crear variable acumulativa
+        if (email != null) {
+            db.collection("Movimientos").document(email).collection("Libro diario")
+                .whereEqualTo("Fecha", lblCalendario.text).get().addOnSuccessListener { //búsqueda para calcular
+                for (document in it) { //recorrer todos los documentos de la tabla "libro darios"
+                    var valorDiario = document.get("Valor") //Almacenar variable deceada
+                    sumaDiario += valorDiario.toString().toFloat() //Sumar variable traida de la base de datos
+                }
+                lblTotalDiario.setText(String.format("%.2f", sumaDiario)) //Mostrar el resultado en el label
             }
         }
     }
