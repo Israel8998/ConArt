@@ -22,9 +22,9 @@
 
     <TextView
         android:id="@+id/valor"
-        android:layout_width="68dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:text="-999.99"
+        android:text="-7777.77"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
