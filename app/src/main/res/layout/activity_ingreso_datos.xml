@@ -8,65 +8,14 @@
     tools:context=".IngresoDatos">
 
     <TextView
-        android:id="@+id/lblTotalDiario"
-        android:layout_width="89dp"
-        android:layout_height="wrap_content"
-        android:text="0.00"
-        android:textAlignment="center"
-        android:textColor="#4EB3B3"
-        app:layout_constraintBottom_toTopOf="@+id/lblTotalMensual"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/divider2" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="89dp"
-        android:layout_height="wrap_content"
-        android:text="Total general"
-        android:textAlignment="center"
-        android:textColor="#131C6A"
-        app:layout_constraintBottom_toTopOf="@+id/divider4"
-        app:layout_constraintEnd_toStartOf="@+id/lblTotal"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="89dp"
-        android:layout_height="wrap_content"
-        android:text="Total diario"
-        android:textAlignment="center"
-        android:textColor="#4EB3B3"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toStartOf="@+id/lblTotalDiario"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider2" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="89dp"
-        android:layout_height="wrap_content"
-        android:text="Total mensual"
-        android:textAlignment="center"
-        android:textColor="#4E73C1"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toStartOf="@+id/lblTotalMensual"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-    <TextView
         android:id="@+id/lblTotal"
-        android:layout_width="89dp"
+        android:layout_width="74dp"
         android:layout_height="wrap_content"
         android:text="0.00"
         android:textAlignment="center"
         android:textColor="#131C6A"
-        app:layout_constraintBottom_toTopOf="@+id/divider4"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView5"
@@ -74,57 +23,76 @@
 
     <TextView
         android:id="@+id/lblTotalMensual"
-        android:layout_width="89dp"
+        android:layout_width="74dp"
         android:layout_height="wrap_content"
         android:text="0.00"
         android:textAlignment="center"
         android:textColor="#4E73C1"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/lblTotal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/lblTotalDiario" />
 
-    <Button
-        android:id="@+id/btnIngresos"
-        android:layout_width="382dp"
-        android:layout_height="68dp"
-        android:background="@drawable/custon_ingreso"
-        android:text="Ingresos"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toTopOf="@+id/btnEgresos"
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:text="Total mensual"
+        android:textAlignment="center"
+        android:textColor="#4E73C1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toStartOf="@+id/lblTotalMensual"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/lblTotalDiario"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:textAlignment="center"
+        android:textColor="#4EB3B3"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblTotalMensual"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:text="Total general"
+        android:textAlignment="center"
+        android:textColor="#131C6A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toStartOf="@+id/lblTotal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:text="Total diario"
+        android:textAlignment="center"
+        android:textColor="#4EB3B3"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/lblTotalDiario"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
-    <Button
-        android:id="@+id/btnEgresos"
-        android:layout_width="382dp"
-        android:layout_height="68dp"
-        android:background="@drawable/custom_egresos"
-        android:text="Egresos"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toTopOf="@+id/btnVerDatos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIngresos" />
-
-    <TextView
-        android:id="@+id/lblCalendario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fecha"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/lblBienvenida"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
     <View
-        android:id="@+id/divider"
+        android:id="@+id/divider2"
         android:layout_width="391dp"
         android:layout_height="1dp"
         android:background="@color/Gris"
@@ -132,10 +100,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblBienvenida" />
+        app:layout_constraintTop_toBottomOf="@+id/lblTotal" />
+
+    <Button
+        android:id="@+id/btnIngresos"
+        android:layout_width="382dp"
+        android:layout_height="68dp"
+        android:background="@drawable/custon_ingreso"
+        android:text="Ingresos"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/btnEgresos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <Button
+        android:id="@+id/btnEgresos"
+        android:layout_width="382dp"
+        android:layout_height="68dp"
+        android:background="@drawable/custom_egresos"
+        android:text="Egresos"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/btnVerDatos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresos" />
 
     <View
-        android:id="@+id/divider2"
+        android:id="@+id/divider"
         android:layout_width="391dp"
         android:layout_height="1dp"
         android:background="@color/Gris"
@@ -143,7 +139,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVerDatos" />
+        app:layout_constraintTop_toBottomOf="@+id/lblBienvenida" />
 
     <View
         android:id="@+id/divider4"
@@ -154,19 +150,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/btnVerDatos" />
 
     <ImageButton
         android:id="@+id/btnConfiguracion"
         android:layout_width="44dp"
         android:layout_height="49dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
         android:background="@null"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.968"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.013"
         app:srcCompat="@drawable/ajuste" />
 
     <TextView
@@ -175,11 +169,25 @@
         android:layout_height="wrap_content"
         android:text="Bienvenido/a"
         android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblCalendario" />
+
+    <TextView
+        android:id="@+id/lblCalendario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblBienvenida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <Button
         android:id="@+id/btnVerDatos"
@@ -187,8 +195,9 @@
         android:layout_height="68dp"
         android:background="@drawable/ver_datos"
         android:text="Ver datos"
+        android:textSize="20sp"
         app:backgroundTint="@null"
-        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintBottom_toTopOf="@+id/divider4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
